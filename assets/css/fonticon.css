@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'fonticon';
-  src: url('../font/fonticon.woff?67639211') format('woff');
+  src: url('../../assets/font/fonticon.woff?67639211') format('woff');
   font-weight: normal;
   font-style: normal;
 }
