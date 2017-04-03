@@ -14,24 +14,14 @@ gulp.task('pack-js', ['clean-js'], function () {
 		},
 		noSource: true
 	}))
-	.pipe(rev())
-	.pipe(gulp.dest('build/js'))
-	.pipe(rev.manifest('build/rev-manifest.json', {
-		merge: true
-	}))
-	.pipe(gulp.dest(''));
+	.pipe(gulp.dest('build/js'));
 });
 
 gulp.task('pack-css', ['clean-css'], function () {	
 	return gulp.src(['assets/css/fonticon.css', 'assets/css/main.css'])
 	.pipe(concat('stylesheet.css'))
 	.pipe(cleanCss())
-	.pipe(rev())
-	.pipe(gulp.dest('build/css'))
-	.pipe(rev.manifest('build/rev-manifest.json', {
-		merge: true
-	}))
-	.pipe(gulp.dest(''));
+	.pipe(gulp.dest('build/css'));
 });
 
 gulp.task('clean-js', function () {
