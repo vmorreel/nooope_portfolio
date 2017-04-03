@@ -1,6 +1,7 @@
 @font-face {
 	font-family: 'gilroy';
-	src: url('../font/gilroy.woff') format('woff');
+	src: url('../font/gilroy.woff') format('woff'),
+	url('../../assets/font/gilroy.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
