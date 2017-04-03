@@ -134,7 +134,7 @@ function activateCheats() {
 
 	header.prepend('<ul class="bg-bubbles" id="' + counter + '">');
 
-	for (var i = 1; i <= $('#title_header h1').text().length+1; i++) {
+	for (var i = 1; i <= ($('#title_header h1').text().length+1)*2; i++) {
 
 		var dim = Math.floor((Math.random() * 25) + 5);
 		var color = colors[Math.floor((Math.random() * 4) + 1)];
