@@ -1,10 +1,11 @@
-var gulp = require('gulp');
-var concat = require('gulp-concat');
-var minify = require('gulp-minify');
-var cleanCss = require('gulp-clean-css');
-var rev = require('gulp-rev');
+var gulp = require('gulp'),
+concat = require('gulp-concat'),
+minify = require('gulp-minify'),
+cleanCss = require('gulp-clean-css'),
+rev = require('gulp-rev'),
+del = require('del');
 
-gulp.task('pack-js', function () {	
+gulp.task('pack-js', ['clean-js'], function () {	
 	return gulp.src(['assets/js/jquery-3.2.0.min.js', 'assets/js/main.js'])
 	.pipe(concat('application.js'))
 	.pipe(minify({
@@ -21,7 +22,7 @@ gulp.task('pack-js', function () {
 	.pipe(gulp.dest(''));
 });
 
-gulp.task('pack-css', function () {	
+gulp.task('pack-css', ['clean-css'], function () {	
 	return gulp.src(['assets/css/fonticon.css', 'assets/css/main.css'])
 	.pipe(concat('stylesheet.css'))
 	.pipe(cleanCss())
@@ -33,4 +34,21 @@ gulp.task('pack-css', function () {
 	.pipe(gulp.dest(''));
 });
 
-gulp.task('default', ['pack-js', 'pack-css']);
+gulp.task('clean-js', function () {
+	return del([
+		'build/js/*.js'
+		]);
+});
+
+gulp.task('clean-css', function () {
+	return del([
+		'build/css/*.css'
+		]);
+});
+
+gulp.task('watch', function() {
+	gulp.watch('assets/js/**/*.js', ['pack-js']);
+	gulp.watch('assets/css/**/*.css', ['pack-css']);
+});
+
+gulp.task('default', ['watch']);
