@@ -1,29 +1,26 @@
+# Block access to the .htaccess file
+
 <Files .htaccess>
 deny from all
 </Files>
 
-# forbid viewing of directories
+
+# Forbid viewing of directories
 Options All -Indexes
 
-# hide this list of files from being seen when listing a directory
+
+# Hide this list of files from being seen when listing a directory
 IndexIgnore .htaccess */.??* *~ *# */HEADER* */README* */_vti*
 
-# disable the server signature- helps with preformance
+
+# Disable the server signature- helps with preformance
 ServerSignature Off
 
-# since it's out of fashion to use www- redirect URLs to non-www
-Options +FollowSymLinks
+
+# Redirect on https 
 RewriteEngine On
-RewriteCond %{HTTP_HOST} ^www\.website\.com$ [NC]
-RewriteRule ^.*$ http://website.com%{REQUEST_URI} [R=301,L]
-RewriteBase /
-
-# keep the URLs clean:
-# if someone asks for index.php- rewrite the URL without it
-RewriteRule ^(.*?)/?index\.html$ $1 [NC,R=301,L]
-
-# Error Pages
-ErrorDocument 404 /404.html
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://nooope.me/$1 [R,L]
 
 
 # Cache Certain file types, saving bandwidth and decreasing load times
@@ -42,12 +39,17 @@ Header set Cache-Control "max-age=2689743, public"
 Header set Cache-Control "max-age=86400, proxy-revalidate"
 </FilesMatch>
 
-RewriteEngine On
-RewriteRule about /about.html
 
-RewriteEngine On
-RewriteRule 404 /404.html
+RewriteEngine On 
+RewriteBase / 
+RewriteRule    ^about$  about.html [L] 
 
-RewriteEngine On
-RewriteCond %{SERVER_PORT} 80
-RewriteRule ^(.*)$ https://nooope.me/$1 [R,L]
+# Error Pages
+ErrorDocument 404 /404.html
+
+
+
+
+
+
+

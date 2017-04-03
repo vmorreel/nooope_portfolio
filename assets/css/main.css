@@ -21,12 +21,12 @@
 
 ::selection {
 	/*color: #1957ef;*/
-	color: #212121;
+	color: var(--red-color);
 	text-shadow: none;
 }
 
 ::-moz-selection{
-	color: #212121;
+	color: var(--red-color);
 	text-shadow: none;
 }
 
@@ -105,11 +105,11 @@ html, body {
 }
 
 .mouse:hover {
-	border-color: #696B6B;
+	border-color: var(--red-color);
 }
 
 .mouse:hover::after {
-	background-color: #696B6B;
+	background-color: var(--red-color);
 }
 
 .mouse::after {
@@ -380,22 +380,22 @@ nav a:hover, nav a:focus {
 	z-index: -1;
 }
 
-.lki.hoverContinue:hover::before, a:nth-of-type(2).hoverBack:hover::after{
+.lki.hoverContinue:hover::before, a:nth-of-type(2).hoverBack:hover::after, a:nth-of-type(2).hoverBack::after{
 	background-color: var(--red-color);
 	border-color: var(--red-color);
 }
 
-.cp.hoverContinue:hover::before, a:nth-of-type(3).hoverBack:hover::after{
+.cp.hoverContinue:hover::before, a:nth-of-type(3).hoverBack:hover::after, a:nth-of-type(3).hoverBack::after{
 	background-color: var(--orange-color);
 	border-color: var(--orange-color);
 }
 
-.tw.hoverContinue:hover::before, a:nth-of-type(4).hoverBack:hover::after{
+.tw.hoverContinue:hover::before, a:nth-of-type(4).hoverBack:hover::after, a:nth-of-type(4).hoverBack::after{
 	background-color: var(--blue-color);
 	border-color: var(--blue-color);
 }
 
-.gh.hoverContinue:hover::before, a:nth-of-type(5).hoverBack:hover::after{
+.gh.hoverContinue:hover::before, a:nth-of-type(5).hoverBack:hover::after, a:nth-of-type(5).hoverBack::after{
 	background-color: var(--green-color);
 	border-color: var(--green-color);
 }
@@ -507,7 +507,7 @@ header .content, #top_logo, footer .content{
 body {
 	overflow-x: hidden;
 	background: #FFFFFF;
-	color: #000000;
+	color: #212121;
 	font: 1em/1.4 "gilroy";
 }
 
