@@ -1,0 +1,3 @@
+User-Agent: *    
+Disallow:
+Sitemap: http://nooope.me/assets/sitemap.xml

@@ -846,6 +846,14 @@ section.content {
 	transform: translateY(-100%);
 }
 
+.bg-line-1, .bg-line-2, .bg-line-3, .bg-line-4, .bg-line-5, .bg-line-6, .bg-line-7 {
+	-webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+	-moz-transform: matrix(1, 0, 0, 1, 0, 0);
+	-ms-transform: matrix(1, 0, 0, 1, 0, 0);
+	-o-transform: matrix(1, 0, 0, 1, 0, 0);
+	transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
 .bg-line-1 {
 	left: calc(12.5vw - 1px);
 }

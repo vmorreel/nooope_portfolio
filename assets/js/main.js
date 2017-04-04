@@ -118,8 +118,8 @@ var radius = {
 
 function activateCheats() {
 	var header = $('header');
-	var headerTitle = $('header h1');
-	var headerParagraph = $('header p');
+	var headerTitle = $('header').find('h1');
+	var headerParagraph = $('header').find('p');
 
 	headerTitle.css({
 		'-webkit-transition': 'all .2s ease-in-out',
@@ -134,7 +134,7 @@ function activateCheats() {
 
 	header.prepend('<ul class="bg-bubbles" id="' + counter + '">');
 
-	for (var i = 1; i <= ($('#title_header h1').text().length+1)*2; i++) {
+	for (var i = 1; i <= ($('#title_header').find('h1').text().length+1)*2; i++) {
 
 		var dim = Math.floor((Math.random() * 25) + 5);
 		var color = colors[Math.floor((Math.random() * 4) + 1)];
@@ -144,7 +144,7 @@ function activateCheats() {
 
 		$('header ul#'+ counter).append('<li>');
 		$('header ul#'+ counter + ' li:nth-of-type(' + i + ')').css({
-			'left': i*100/$('#title_header h1').text().length-4 + '%',
+			'left': i*100/$('#title_header').find('h1').text().length-4 + '%',
 			'z-index': Math.floor((Math.random() * 9) + 1),
 			'width': dim,
 			'height': dim,
