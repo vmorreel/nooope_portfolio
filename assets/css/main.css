@@ -1023,6 +1023,32 @@ svg:not(:root) {
 }
 
 
+/* 404 Page */
+
+#content404 {
+	height: 100%;
+	display: flex;
+}
+
+#content404 > div:nth-of-type(1) {
+	height: auto;
+	margin: auto;
+}
+
+#content404 > div > h2 {
+	font-size: 13vh;
+	color: #FC2145;
+}
+
+#content404 > div > p {
+	font-size: 5.5vh;
+	padding-bottom: 10%;
+}
+
+#content404 > div > a {
+	color: #212121;
+}
+
 
 /*MEDIA QUERIES*/
 @media (min-width: 40em) {
@@ -1111,6 +1137,15 @@ svg:not(:root) {
 	label .burger {
 		top: 1.5em;
 	}
+	#content404{
+		height: 100%;
+	}
+	#content404{
+		height: 100%;
+	}
+	#content404 > div > p {
+		padding-bottom: 5%;
+	}
 }
 
 @media only screen and (max-width: 31.875em){
@@ -1120,9 +1155,11 @@ svg:not(:root) {
 		width: 50%;
 		margin: 10px 0;
 	}
-
 	.footer-links li:last-of-type {
 		margin-bottom: 30px;
+	}
+	#content404{
+		height: 100%;
 	}
 }
 

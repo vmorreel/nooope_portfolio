@@ -61,6 +61,7 @@ RewriteRule    ^about$  about.html [L]
 
 # Error Pages
 ErrorDocument 404 /404.html
+#ErrorDocument 403 /403.html
 
 
 
