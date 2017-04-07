@@ -124,11 +124,11 @@ var radius = {
 	'2': '500px'
 };
 
-function activateCheats() {
-	var header = $('header');
-	var headerTitle = $('header').find('h1');
-	var headerParagraph = $('header').find('p');
+var header = $('header');
+var headerTitle = $('header').find('h1');
+var headerParagraph = $('header').find('p');
 
+function cheatTitle() {
 	headerTitle.css({
 		'-webkit-transition': 'all .2s ease-in-out',
 		'-moz-transition': 'all .2s ease-in-out',
@@ -136,10 +136,11 @@ function activateCheats() {
 		'-o-transition': 'all .2s ease-in-out',
 		'transition': 'all .2s ease-in-out'
 	});
-
 	headerTitle.text('such particles');
 	headerParagraph.text('Konami Code is geek');
+}
 
+function showBubbles() {
 	header.prepend('<ul class="bg-bubbles" id="' + counter + '">');
 
 	for (var i = 1; i <= ($('#title_header').find('h1').text().length+1)*2; i++) {
@@ -166,6 +167,11 @@ function activateCheats() {
 			'transform': 'scale3d(1,1,1), perspective(1px)'
 		});
 	}
+}
+
+function activateCheats() {
+	cheatTitle();
+	showBubbles();
 }
 
 var allowedKeys = {
