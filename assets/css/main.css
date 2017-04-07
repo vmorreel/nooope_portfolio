@@ -1097,6 +1097,35 @@ svg:not(:root) {
 	#title_header p {
 		font-size: 3vw;
 	}
+	#portfolio {
+		padding: 0;
+	}
+	.project_container {
+		margin: 0 auto; 
+		height: 400px;
+	}
+	.left-side, .right-side {
+		-webkit-transform: translateX(0);
+		-moz-transform: translateX(0);
+		-ms-transform: translateX(0);
+		-o-transform: translateX(0);
+		transform: translateX(0);
+	}
+	.card, .card-bg {
+		width: 100%;
+		height: 100%;
+	}
+	.card-year {
+		top: 0;
+		left: 0;
+	}
+	.card-role, .card-line, .card-project {
+		display: none;
+	}
+	.card-title {
+		top: 33%;
+		left: 42%;
+	}
 }
 
 @media (max-width: 40em) {
@@ -1120,6 +1149,33 @@ svg:not(:root) {
 	}
 	#social_network {
 		left: 30vw;
+	}
+	#portfolio {
+		padding: 0;
+	}
+	.project_container {
+		margin: 0 auto; 
+	}
+	.left-side, .right-side {
+		-webkit-transform: translateX(0);
+		-moz-transform: translateX(0);
+		-ms-transform: translateX(0);
+		-o-transform: translateX(0);
+		transform: translateX(0);
+	}
+	.card, .card-bg {
+		width: 100%;
+	}
+	.card-year {
+		top: 0;
+		left: 0;
+	}
+	.card-role, .card-line, .card-project {
+		display: none;
+	}
+	.card-title {
+		top: 33%;
+		left: 30%;
 	}
 }
 
@@ -1145,6 +1201,36 @@ svg:not(:root) {
 	}
 	#content404 > div > p {
 		padding-bottom: 5%;
+	}
+}
+
+@media (max-width: 55em) and (orientation: landscape){
+	#portfolio {
+		padding: 0;
+	}
+	.project_container {
+		margin: 0 auto; 
+	}
+	.left-side, .right-side {
+		-webkit-transform: translateX(0);
+		-moz-transform: translateX(0);
+		-ms-transform: translateX(0);
+		-o-transform: translateX(0);
+		transform: translateX(0);
+	}
+	.card, .card-bg {
+		width: 100%;
+	}
+	.card-year {
+		top: 0;
+		left: 0;
+	}
+	.card-role, .card-line, .card-project {
+		display: none;
+	}
+	.card-title {
+		top: 33%;
+		left: 39%;
 	}
 }
 
