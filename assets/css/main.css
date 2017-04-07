@@ -734,7 +734,7 @@ section.content {
 
 .card-year {
 	position: absolute;
-	top: -408px;
+	top: -418px;
 	left: -35px;
 	color: #212121;
 	z-index: 99;
@@ -876,28 +876,6 @@ section.content {
 .bg-line-7 {
 	left: calc(87.5vw - 1px);
 }
-
-/*FOOTER*/
-/*Old footer with transition*/
-/*.footer.show {
-	bottom: 0;
-}
-
-.footer {
-	height: 200px;
-	color: #FFFFFF;
-	background: #e63760;
-	width: 100%;
-	position: fixed;
-	bottom: -265px;
-	background: rgba(15, 15, 15,0.6);
-	left: 0;
-	-webkit-transition: bottom 150ms linear;
-	-moz-transition: bottom 150ms linear;
-	-o-transition: bottom 150ms linear;
-	transition: bottom 150ms linear;
-}
-*/
 
 .footer {
 	color: #f3f3f3;

@@ -203,6 +203,11 @@ document.addEventListener('keydown', function(e) {
 	}
 });
 
+function resetCss(el)
+{
+	el.removeAttr('style');
+}
+
 function showCards()
 {
 	$('.project_container').each( function(i){
