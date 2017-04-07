@@ -789,8 +789,8 @@ section.content {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 400px;
-	height: 280px;
+	width: 0px;
+	height: 0px;
 }
 
 .left-side {

@@ -223,6 +223,7 @@ function showCards()
 			$(this).find('div.card-title').animate({'left':'70%'},500);
 			$(this).find('div.card-project').animate({'left':'70%'},450);
 			$(this).find('div.card-line').animate({'top':'64%'},450);
+			$(this).find('div.card-bg').animate({'width':'400px', 'height':'280px'},300);
 		}
 	}); 
 }
