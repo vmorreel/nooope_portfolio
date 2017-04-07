@@ -1154,7 +1154,8 @@ svg:not(:root) {
 		padding: 0;
 	}
 	.project_container {
-		margin: 0 auto; 
+		margin: 0 auto;
+		height: 300px;
 	}
 	.left-side, .right-side {
 		-webkit-transform: translateX(0);
