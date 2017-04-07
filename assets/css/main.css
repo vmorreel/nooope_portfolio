@@ -1126,6 +1126,16 @@ svg:not(:root) {
 		top: 33%;
 		left: 42%;
 	}
+	[id="navcheck"]:checked ~ .parallax main .left-side{
+		-webkit-filter: blur(7px);
+		filter: blur(7px);
+	}
+
+	[id="navcheck"]:checked ~ .parallax main .right-side{
+		transform: translateX(0%);
+		-webkit-filter: blur(7px);
+		filter: blur(7px);
+	}
 }
 
 @media (max-width: 40em) {
