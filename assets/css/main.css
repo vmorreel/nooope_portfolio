@@ -721,6 +721,7 @@ section.content {
 	width: 100%;
 	height: auto;
 	z-index: 9;
+	opacity: 0;
 }
 
 .card {
@@ -733,7 +734,7 @@ section.content {
 
 .card-year {
 	position: absolute;
-	top: -18px;
+	top: -408px;
 	left: -35px;
 	color: #212121;
 	z-index: 99;
@@ -746,7 +747,7 @@ section.content {
 .card-role {
 	position: absolute;
 	top: 85%;
-	left: -12%;
+	left: -152%;
 	color: #212121;
 	font-size: 13px;
 	z-index: 99;
@@ -756,7 +757,7 @@ section.content {
 .card-title {
 	position: absolute;
 	top: 20%;
-	left: 70%;
+	left: 270%;
 	color: #212121;
 	font-size: 80px;
 	letter-spacing: -3px;
@@ -766,7 +767,7 @@ section.content {
 .card-project {
 	position: absolute;
 	top: 50%;
-	left: 70%;
+	left: 270%;
 	color: #212121;
 	font-size: 20px;
 	width: auto;
@@ -776,7 +777,7 @@ section.content {
 
 .card-line {
 	position: absolute;
-	top: 64%;
+	top: 264%;
 	left: calc(100% - 40px);
 	width: 80px;
 	height: 8px;
@@ -1103,6 +1104,7 @@ svg:not(:root) {
 	.project_container {
 		margin: 0 auto; 
 		height: 400px;
+		opacity: 1;
 	}
 	.left-side, .right-side {
 		-webkit-transform: translateX(0);
@@ -1166,6 +1168,7 @@ svg:not(:root) {
 	.project_container {
 		margin: 0 auto;
 		height: 300px;
+		opacity: 1;
 	}
 	.left-side, .right-side {
 		-webkit-transform: translateX(0);
@@ -1220,7 +1223,8 @@ svg:not(:root) {
 		padding: 0;
 	}
 	.project_container {
-		margin: 0 auto; 
+		margin: 0 auto;
+		opacity: 1;
 	}
 	.left-side, .right-side {
 		-webkit-transform: translateX(0);
