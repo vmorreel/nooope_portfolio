@@ -762,6 +762,7 @@ section.content {
 	font-size: 80px;
 	letter-spacing: -3px;
 	z-index: 99;
+	width: 100%;
 }
 
 .card-title h2 {
