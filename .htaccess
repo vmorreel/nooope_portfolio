@@ -31,6 +31,12 @@ RewriteCond %{SERVER_PORT} 80
 RewriteRule ^(.*)$ https://nooope.me/$1 [R,L]
 
 
+#Force non-www:
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www\.nooope\.me [NC]
+RewriteRule ^(.*)$ https://nooope.me/$1 [L,R=301]
+
+
 # To send cookies with HTTPS
 <IfModule mod_headers.c>
 Header edit Set-Cookie ^(.*)$ $1;HttpOnly;Secure
